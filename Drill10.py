@@ -67,6 +67,7 @@ def reset_world():
 
 class Ball:
     def __init__(self):
+        
         pass
 
     def update(self):
