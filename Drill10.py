@@ -83,6 +83,10 @@ class SM_Ball:
 #큰 공
 class Big_Ball:
     def __init__(self):
+        self.x=random.randint(0,700)
+        self.y=100
+        self.frame=0
+        self.image=load_image('ball41x41.png')
         pass
 
     def update(self):
