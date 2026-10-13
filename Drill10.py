@@ -83,6 +83,7 @@ class SM_Ball:
         pass
 
     def update(self):
+        self.y-=5
         pass
 
     def draw(self):
