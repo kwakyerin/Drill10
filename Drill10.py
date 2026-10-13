@@ -59,12 +59,15 @@ def reset_world():
     global grass
     global team
     global sm_ball
+    global big_ball
 
     grass=Grass()
     sm_ball=SM_Ball()
+    big_ball=Big_Ball()
 
     world.append(grass)
     world.append(sm_ball)
+    world.append(big_ball)
 
     team=[Boy() for i in range(11)]
     world+=team #world리스트에 팀 리스트를 합친다.
@@ -98,6 +101,7 @@ class Big_Ball:
         pass
 
     def draw(self):
+        self.image.draw(600,400)
         pass    
     
 
