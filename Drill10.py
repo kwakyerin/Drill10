@@ -85,7 +85,7 @@ class Big_Ball:
         pass
 
     def update(self):
-        self.y-=5
+        self.y-=random.randint(1,10)
         pass
 
     def draw(self):
