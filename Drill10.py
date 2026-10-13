@@ -58,39 +58,33 @@ def reset_world():
     world+=sm_team
     world+=big_team
 
+    
+
 #작은 공
 class SM_Ball:
     def __init__(self):
         self.x=random.randint(0,700)
         self.y=599
-        self.frame=0
         self.image=load_image('ball21x21.png')
-        pass
 
     def update(self):
         self.y-=random.randint(1,10)
-        pass
 
     def draw(self):
         self.image.draw(self.x,self.y)
-        pass
 
 #큰 공
 class Big_Ball:
     def __init__(self):
         self.x=random.randint(0,700)
         self.y=599
-        self.frame=0
         self.image=load_image('ball41x41.png')
-        pass
 
     def update(self):
         self.y-=random.randint(1,10)
-        pass
 
     def draw(self):
         self.image.draw(self.x,self.y)
-        pass    
     
 
 #상호작용
@@ -125,6 +119,7 @@ open_canvas()
 reset_world() #세상을 구성하는 객체들을 초기화
 
 while running:
+
     handle_events()
     update_world()
     render_world()
