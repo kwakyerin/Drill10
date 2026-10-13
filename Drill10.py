@@ -65,7 +65,8 @@ def reset_world():
     team=[Boy() for i in range(11)]
     world+=team #world리스트에 팀 리스트를 합친다.
 
-class Ball:
+#작은 공
+class SM_Ball:
     def __init__(self):
         
         pass
@@ -75,6 +76,17 @@ class Ball:
 
     def draw(self):
         pass
+
+#큰 공
+class Big_Ball:
+    def __init__(self):
+        pass
+
+    def update(self):
+        pass
+
+    def draw(self):
+        pass    
     
 
 #상호작용
