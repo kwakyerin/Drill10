@@ -60,18 +60,19 @@ def reset_world():
     global team
     global big_ball
     global sm_team
+    global big_team
 
     grass=Grass()
-    big_ball=Big_Ball()
 
     world.append(grass)
-    world.append(big_ball)
 
     team=[Boy() for i in range(11)]
     sm_team=[SM_Ball() for i in range(10)]
+    big_team=[Big_Ball() for i in range(10)]
 
     world+=team #world리스트에 팀 리스트를 합친다.
     world+=sm_team
+    world+=big_team
 
 #작은 공
 class SM_Ball:
