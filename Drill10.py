@@ -58,9 +58,13 @@ def reset_world():
     #잔디 객체를 찍어낸다.
     global grass
     global team
+    global sm_ball
 
     grass=Grass()
+    sm_ball=SM_Ball()
+
     world.append(grass)
+    world.append(sm_ball)
 
     team=[Boy() for i in range(11)]
     world+=team #world리스트에 팀 리스트를 합친다.
@@ -68,8 +72,8 @@ def reset_world():
 #작은 공
 class SM_Ball:
     def __init__(self):
-        self.x=random.randint(0,700)
-        self.y=100
+        #self.x=random.randint(0,700)
+        #self.y=100
         self.frame=0
         self.image=load_image('ball21x21.png')
         pass
@@ -78,13 +82,14 @@ class SM_Ball:
         pass
 
     def draw(self):
+        self.image.draw(400,400)
         pass
 
 #큰 공
 class Big_Ball:
     def __init__(self):
-        self.x=random.randint(0,700)
-        self.y=100
+        #self.x=random.randint(0,700)
+        #self.y=100
         self.frame=0
         self.image=load_image('ball41x41.png')
         pass
@@ -107,6 +112,7 @@ def render_world():
     clear_canvas()
     for o in world:
         o.draw()
+        
     update_canvas()
 
 
