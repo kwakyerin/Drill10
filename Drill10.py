@@ -68,7 +68,10 @@ def reset_world():
 #작은 공
 class SM_Ball:
     def __init__(self):
-        
+        self.x=random.randint(0,700)
+        self.y=100
+        self.frame=0
+        self.image=load_image('ball21x21.png')
         pass
 
     def update(self):
